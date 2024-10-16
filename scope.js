@@ -10,18 +10,18 @@
 
 // JavaScript Local Variables --> When variables are declared inside a function, they have a local scope and are accessible only within that function
 
-// function greet(){
-//     var message = 'Hello';
-//     let name = 'John';
-//     const country = 'USA';
-// }
+function greet(){
+    var message = 'Hello';
+    let name = 'John';
+    const country = 'USA';
+}
 
-// greet();
+greet();
 
-//Try to access variables outside the function you will see ReferenceError like message is not defined
-// console.log(message);
-// console.log(name);
-// console.log(country);
+// Try to access variables outside the function you will see ReferenceError like message is not defined
+console.log(message);
+console.log(name);
+console.log(country);
 
 
 // JavaScript Global Variables --> In JavaScript, a variable declared outside any function or in the global scope is known as a global variable
