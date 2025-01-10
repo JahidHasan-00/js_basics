@@ -26,21 +26,31 @@ function sum(){
     console.log(a + b);
 }
 
-
-console.log(sub);
-function subtraction(){
-    var sub = 20 - 10;
+subtract();
+const subtract = function(){
+    console.log(20 - 10); // ReferenceError: Cannot access 'subtract' before initialization
 }
-subtraction();
 
-// Hoisting with let and const :
+// Hoisting with let and const --> Although variables declared with let and const are also hoisted. but not accessible. because variables declared with let and const do not have a default value when hoisted :
 
 console.log(number);
 let number = 100;
 
-console.log(a);
+console.log(a);// output: 50
 if(true){
-    const a = 50;
+    var a = 50;
 }
+
+test();
+// output: ReferenceError: Cannot access 'b' before initialization
+function test(){
+    var b = 40;
+    console.log(b);
+}
+
+
+
+
+
 
 
