@@ -2,7 +2,15 @@ document.querySelector('h1').style.fontSize = '3em';
 
 const addStyle = document.querySelector('h2');
 console.log(addStyle);
-addStyle.id = 'h2'
+addStyle.id = 'h2';
+/** 
+document.getElementById('h2').innerHTML
+->'Hello World <span style="display: none;">I am from Bangladesh</span>'
+document.getElementById('h2').innerText
+->'Hello World'
+document.getElementById('h2').textContent
+->'Hello World I am from Bangladesh'
+ */
 document.getElementById('h2').innerText = 'Hello World';
 addStyle.style.color = 'green';
 addStyle.style.background = 'gray';
@@ -22,7 +30,7 @@ console.log(box);
 // Note: NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().
 // Although NodeList is not an Array, it is possible to iterate on it using forEach(). It can also be converted to a real Array using Array.from().
 
-const boxElement = document.querySelectorAll('p');
+const boxElement = document.querySelectorAll('.container > p');
 // console.log(boxElement);
 boxElement.forEach(element => {
     element.style.color = 'green';
@@ -51,3 +59,12 @@ convertIntoArray.forEach( i => {
     i.style.padding = '5px'; 
 
 })
+
+//Attribute set and get in JavaScript:
+const getAttr = document.querySelector('.parent').getAttribute('style');
+console.log(getAttr);
+
+const setAttr = document.querySelector('.parent').setAttribute('class', 'text-color parent');
+console.log(setAttr);
+
+document.querySelector('.parent').setAttribute('class', 'text-align text-color parent');

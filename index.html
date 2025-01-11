@@ -4,15 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document(DOM)</title>
+    <style>
+        #box {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .class-1 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+        }
+        .btn-main {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .text-color{
+            color: white;
+        }
+        .text-align{
+            text-align: center;
+        }
+        .parent{
+            width: 130px;
+            padding: 10px 20px;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1 id="box">DOM</h1>
-    <h2></h2>
+    <h2>Hello World <span style="display: none;" >I am from Bangladesh</span></h2>
     <!-- <p id="id-1">ID Selector</p> -->
     <div id="id-2" class="container">
         <p class="class-1">Class Selector</p>
         <p class="class-1">Class Selector</p>
         <p class="class-1">Class Selector</p>
+    </div>
+    <div class="parent" id="parent">
+        <p>Set Color</p>
     </div>
     <script src="/document.js"></script>
 </body>
