@@ -26,11 +26,37 @@ secHero.append(addBtn);
 //Add an Element: list(<li> </li>) Element
 function addFruits(fruitName){
     const li = document.createElement('li');
-    li.innerText = `${fruitName}`;
+    li.innerHTML = `${fruitName}`;
 
     document.querySelector('ul').append(li);
 }
 addFruits('Apple');
 
+//Add Element: Optimize way
+function moreFruits(nameFruit){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(nameFruit));
+
+    document.querySelector('ul').append(li);
+}
+moreFruits('Grape');
+moreFruits('Orange');
+
+//Edit Element:
+const edit = document.querySelector('li:nth-child(4)');
+edit.innerText = 'Jackfruit';
+
+//Another way to edit using replaceWith() method:
+const edit2 = document.querySelector('li:last-child');
+edit2.textContent = 'Strawberry';
+
+const newFruit = document.createElement('li');
+// console.log(newFruit);
+newFruit.textContent = 'Cherry';
+edit2.replaceWith(newFruit);
 
 
+//Delete Element using remove() method:
+const deleteItem = document.querySelector('li:last-child');
+// console.log(deleteItem)
+deleteItem.remove();
